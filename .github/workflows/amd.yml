@@ -28,4 +28,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: quay.io/suriyariya5920/my-verse:v3
+          tags: quay.io/suriyarajagopal/my-verse:v3
