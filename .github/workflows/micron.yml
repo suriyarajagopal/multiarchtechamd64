@@ -27,9 +27,11 @@ jobs:
 
       - name: Build and Push Multi-Arch Image
         uses: docker/build-push-action@v5
+        run: |
+            cd ./microserver
+            docker build -t my-micro:v1 .
+          
         with:
-          context: ./microserver  
-          file: ./microserver/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: quay.io/suriyariya5920/my-micro:v1
